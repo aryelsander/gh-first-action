@@ -1,0 +1,10 @@
+name: First Workflow # The name of the Workflow
+on: workflow_dispatch # sets to user mannualy execute this workflow
+jobs: #jobs declarations
+  first-job: #job name, can be any name
+    runs-on: ubuntu-latest #target a runner, can see other runners from github: https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners#viewing-available-runners-for-a-repository
+    steps:
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: Print goodbye
+        run: echo "Done - bye!"
